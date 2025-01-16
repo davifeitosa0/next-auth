@@ -8,7 +8,7 @@ const Home = async () => {
 
   return (
     <div className="flex items-center justify-center h-screen">
-      <div className="flex items-center justify-center gap-6 bg-primary w-80 h-40 p-4 rounded-[60px]">
+      <div className="flex items-center justify-center gap-6 bg-primary min-w-80 w-fit h-40 p-4 rounded-[60px]">
         <Image
           width={80}
           height={80}

@@ -6,7 +6,7 @@ export const LogOutButton = () => {
   return (
     <LogOut
       onClick={() => signOut({ callbackUrl: "/" })}
-      className="cursor-pointer hover:bg-red-600 p-1 size-8 rounded-xl "
+      className="cursor-pointer hover:bg-red-600 p-1 size-8 rounded-sm "
     />
   );
 };
