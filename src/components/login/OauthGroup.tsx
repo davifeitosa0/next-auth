@@ -9,7 +9,7 @@ export default function OauthGroup() {
   return (
     <>
       <OauthItem
-        onClick={() => signIn("github")}
+        onClick={() => signIn("github", { callbackUrl: "/home" })}
         className="bg-[#0d1017] hover:bg-[#111] text-white"
       >
         <Github />
