@@ -1,7 +1,7 @@
 import Form from "@/components/login/Form";
 import OauthGroup from "@/components/login/OauthGroup";
+import { authOptions } from "@/lib/auth";
 import { getServerSession } from "next-auth";
-import { authOptions } from "@/app/api/auth/[...nextauth]/route";
 
 const Login =  async () => {
   const session = await getServerSession(authOptions);
