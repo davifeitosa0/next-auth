@@ -14,7 +14,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt">
-      <body className="bg-[#1f1c24] antialiased">
+      <body className="bg-[#1f1c24] antialiased text-secundary ">
         <SessionWrapper>{children}</SessionWrapper>
       </body>
     </html>

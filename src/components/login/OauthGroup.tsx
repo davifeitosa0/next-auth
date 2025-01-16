@@ -1,17 +1,11 @@
 "use client";
-import { Github } from "lucide-react";
-import Image from "next/image";
 import Google from "@/../public/icons/google.png";
 import OauthItem from "@/components/login/OauthItem";
-import { signIn, useSession } from "next-auth/react";
-import { useEffect } from "react";
+import { Github } from "lucide-react";
+import { signIn } from "next-auth/react";
+import Image from "next/image";
 
 export default function OauthGroup() {
-  const { data: session } = useSession();
-  useEffect(() => {
-    console.log(session?.user);
-  },[session])
-  
   return (
     <>
       <OauthItem
@@ -23,7 +17,7 @@ export default function OauthGroup() {
       </OauthItem>
 
       <OauthItem
-        onClick={() => console.log("Google")}
+        onClick={() => signIn("google", { callbackUrl: "/home" })}
         className="bg-white text-primary hover:opacity-90"
       >
         <Image src={Google} alt="Google icon" width={24} height={24} />
@@ -32,4 +26,3 @@ export default function OauthGroup() {
     </>
   );
 }
-

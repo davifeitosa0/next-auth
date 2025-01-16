@@ -1,12 +1,7 @@
 import Form from "@/components/login/Form";
 import OauthGroup from "@/components/login/OauthGroup";
-import { authOptions } from "@/lib/auth";
-import { getServerSession } from "next-auth";
 
-const Login =  async () => {
-  const session = await getServerSession(authOptions);
-  console.log(session);
-
+const Login = async () => {
   return (
     <div className="flex items-center justify-center h-screen">
       <div className="bg-primary w-[40rem] h-[50rem] flex justify-center rounded-xl text-secundary shadow-md">
@@ -16,7 +11,7 @@ const Login =  async () => {
 
           <div className="flex flex-col gap-2 font-semibold h-full mt-10 ">
             <div className="inline-flex items-center justify-center w-full">
-              <hr className="w-full h-px my-8 bg-gray-200 border-0 dark:bg-gray-700" />
+              <hr className="w-full h-px my-8 bg-gray-200 border-0" />
               <span className="absolute px-3 font-medium -translate-x-1/2 bg-primary left-1/2 text-sm text-secundary">
                 Ou entre com
               </span>
@@ -32,4 +27,3 @@ const Login =  async () => {
   );
 };
 export default Login;
-

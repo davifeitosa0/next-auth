@@ -5,7 +5,7 @@ import CredentialsProvider from "next-auth/providers/credentials";
 
 export const authOptions: NextAuthOptions = {
   secret: process.env.NEXTAUTH_SECRET,
-  pages: { signIn: "/" },
+  pages: { signIn: "/home" },
   providers: [
     CredentialsProvider({
       credentials: {},
@@ -22,12 +22,12 @@ export const authOptions: NextAuthOptions = {
       },
     }),
     GitHubProvider({
-      clientId: process.env.NEXT_PUBLIC_GITHUB_ID as string,
-      clientSecret: process.env.NEXT_PUBLIC_GITHUB_SECRET as string,
+      clientId: process.env.NEXT_PUBLIC_GITHUB_ID!,
+      clientSecret: process.env.NEXT_PUBLIC_GITHUB_SECRET!,
     }),
     GoogleProvider({
-      clientId: "",
-      clientSecret: "",
+      clientId: process.env.NEXT_PUBLIC_GOOGLE_ID!,
+      clientSecret: process.env.NEXT_PUBLIC_GOOGLE_SECRET!,
     }),
   ],
 };
