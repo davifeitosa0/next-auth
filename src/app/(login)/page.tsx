@@ -3,8 +3,8 @@ import OauthGroup from "@/components/login/OauthGroup";
 
 const Login = async () => {
   return (
-    <div className="flex justify-center py-2 h-screen">
-      <div className="bg-primary my-auto w-[40rem] max-h-[50rem] h-screen min-h-fit flex justify-center rounded-xl text-secundary shadow-md">
+    <div className="flex justify-center py-3 min-h-screen h-fit">
+      <div className="bg-primary my-auto w-[40rem] max-h-[50rem] py-4 h-screen min-h-fit flex justify-center rounded-xl text-secundary shadow-md">
         <div className="w-[90%] flex flex-col h-fit md:p-0 py-2">
           <h1 className="text-4xl text-center font-bold p-8">Login</h1>
           <FormItems />
