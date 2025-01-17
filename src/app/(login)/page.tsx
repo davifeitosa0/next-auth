@@ -1,13 +1,13 @@
-import Form from "@/components/login/Form";
+import FormItems from "@/components/login/FormItems";
 import OauthGroup from "@/components/login/OauthGroup";
 
 const Login = async () => {
   return (
-    <div className="flex items-center justify-center h-screen">
-      <div className="bg-primary w-[40rem] h-[50rem] flex justify-center rounded-xl text-secundary shadow-md">
-        <div className="w-[90%] flex flex-col ">
+    <div className="flex justify-center py-2 h-screen">
+      <div className="bg-primary my-auto w-[40rem] max-h-[50rem] h-screen min-h-fit flex justify-center rounded-xl text-secundary shadow-md">
+        <div className="w-[90%] flex flex-col h-fit md:p-0 py-2">
           <h1 className="text-4xl text-center font-bold p-8">Login</h1>
-          <Form />
+          <FormItems />
 
           <div className="flex flex-col gap-2 font-semibold h-full mt-10 ">
             <div className="inline-flex items-center justify-center w-full">

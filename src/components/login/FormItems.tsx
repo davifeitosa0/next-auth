@@ -2,18 +2,19 @@
 import { signIn } from "next-auth/react";
 import { useForm } from "react-hook-form";
 import Input from "../shared/Input";
+import Form from 'next/form'
 
 type FormValues = {
   email: string;
   password: string;
 };
 
-export default function Form() {
+export default function FormItems() {
   const { register, handleSubmit } = useForm<FormValues>();
 
-  const onSubmit = (data: FormValues) => {
+  const onSubmit = async (data: FormValues) => {
     signIn("credentials", {
-      redirect: false,
+      callbackUrl: "/home", 
       email: data.email,
       password: data.password,
     });
@@ -21,7 +22,8 @@ export default function Form() {
 
   return (
     <>
-      <form
+      <Form
+        action="/api/auth/callback/credentials"
         onSubmit={handleSubmit(onSubmit)}
         className="items-center gap-5 justify-center w-full flex flex-col"
       >
@@ -58,7 +60,7 @@ export default function Form() {
         >
           Entrar
         </button>
-      </form>
+      </Form>
     </>
   );
 }

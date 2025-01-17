@@ -14,7 +14,7 @@ export const authOptions: NextAuthOptions = {
 
         const user = {
           id: "1",
-          name: password,
+          name: email,
           email: email,
           image: "",
         };
